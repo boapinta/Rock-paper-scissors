@@ -1,5 +1,8 @@
-package com.rps;
+package com.rps.strategy;
 
+
+import com.rps.GamePlayOption;
+import com.rps.strategy.RandomGamePlayStrategy;
 import org.junit.Test;
 
 import java.util.Map;
@@ -10,18 +13,18 @@ import static java.util.stream.Collectors.counting;
 import static java.util.stream.Collectors.groupingBy;
 import static org.assertj.core.api.Java6Assertions.assertThat;
 
-public class RockOnlyGamePlayStrategyTest {
+public class RandomGamePlayStrategyTest {
 
-    private RockOnlyGamePlayStrategy strategy = new RockOnlyGamePlayStrategy();
+    private RandomGamePlayStrategy strategy = new RandomGamePlayStrategy();
 
     @Test
-    public void shouldReturnRockOnly() {
+    public void shouldReturnVariousResults() {
         Map<GamePlayOption, Long> playOptions = IntStream
                 .rangeClosed(1, 100)
                 .mapToObj(i -> strategy.play())
                 .collect(groupingBy(identity(), counting()));
 
-        assertThat(playOptions.keySet()).contains(GamePlayOption.ROCK);
-        assertThat(playOptions.keySet()).doesNotContain(GamePlayOption.PAPER, GamePlayOption.SCISSORS);
+        assertThat(playOptions.keySet())
+                .contains(GamePlayOption.ROCK, GamePlayOption.PAPER, GamePlayOption.SCISSORS);
     }
 }

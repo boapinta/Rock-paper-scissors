@@ -1,4 +1,6 @@
-package com.rps;
+package com.rps.strategy;
+
+import com.rps.GamePlayOption;
 
 import java.util.Random;
 
