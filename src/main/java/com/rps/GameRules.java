@@ -1,9 +1,16 @@
 package com.rps;
 
+import com.rps.domain.GamePlayOption;
+import com.rps.domain.GamePlayResult;
 import com.rps.utils.MapWrapper;
 
 import java.util.Map;
 
+/**
+ * These values are consistent with values of {@link GamePlayOption}.
+ * This makes it possible to call GameRules.valueOf(option.name())
+ * to get rule for given option.
+ */
 public enum GameRules {
 
     ROCK(MapWrapper.<GamePlayOption, GamePlayResult> instance()

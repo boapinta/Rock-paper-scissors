@@ -1,6 +1,6 @@
 package com.rps.strategy;
 
-import com.rps.GamePlayOption;
+import com.rps.domain.GamePlayOption;
 
 import java.util.Random;
 

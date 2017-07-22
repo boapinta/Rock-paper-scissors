@@ -1,4 +1,4 @@
-package com.rps;
+package com.rps.domain;
 
 public enum GamePlayOption {
     ROCK, PAPER, SCISSORS

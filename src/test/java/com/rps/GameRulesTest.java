@@ -1,5 +1,7 @@
 package com.rps;
 
+import com.rps.domain.GamePlayOption;
+import com.rps.domain.GamePlayResult;
 import org.junit.Test;
 
 import static org.assertj.core.api.Java6Assertions.assertThat;

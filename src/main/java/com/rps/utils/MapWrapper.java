@@ -3,6 +3,9 @@ package com.rps.utils;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Utility for building a HashMap in one-line code.
+ */
 public final class MapWrapper<KEY, VALUE> {
     private Map<KEY, VALUE> map;
     

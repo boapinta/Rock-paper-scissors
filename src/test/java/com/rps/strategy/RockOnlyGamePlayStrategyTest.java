@@ -1,7 +1,6 @@
 package com.rps.strategy;
 
-import com.rps.GamePlayOption;
-import com.rps.strategy.RockOnlyGamePlayStrategy;
+import com.rps.domain.GamePlayOption;
 import org.junit.Test;
 
 import java.util.Map;

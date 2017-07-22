@@ -1,8 +1,7 @@
 package com.rps.strategy;
 
 
-import com.rps.GamePlayOption;
-import com.rps.strategy.RandomGamePlayStrategy;
+import com.rps.domain.GamePlayOption;
 import org.junit.Test;
 
 import java.util.Map;
