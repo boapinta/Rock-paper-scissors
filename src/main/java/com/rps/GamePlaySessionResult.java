@@ -19,7 +19,7 @@ public class GamePlaySessionResult {
         private GamePlayResult player1Result;
         private GamePlayResult player2Result;
 
-        public SingleGamePlay(GamePlayResult player1Result, GamePlayResult player2Result) {
+        private SingleGamePlay(GamePlayResult player1Result, GamePlayResult player2Result) {
             if ((player1Result == player2Result && player1Result != GamePlayResult.DRAW)
                     || (player1Result != player2Result && (player1Result == GamePlayResult.DRAW || player2Result == GamePlayResult.DRAW))
                     ) {
@@ -38,6 +38,10 @@ public class GamePlaySessionResult {
         public GamePlayResult getPlayer2Result() {
             return player2Result;
         }
+    }
+
+    public static SingleGamePlay createSingleGamePlay(GamePlayResult player1Result, GamePlayResult player2Result) {
+        return new SingleGamePlay(player1Result, player2Result);
     }
 
     private final Collection<SingleGamePlay> gamePlays;
