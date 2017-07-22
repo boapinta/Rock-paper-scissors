@@ -23,9 +23,15 @@ To run test call
 ```sh
 $ mvn clean test
 ```
-To build and run application call
+To build and run the application as maven project call
 ```sh
 $ mvn clean package
 $ mvn exec:java -Dexec.mainClass="com.rps.GamePlaySessionRunner"
 ```
 Optionally one can pass number of iterations by adding ` -Dexec.args="99"`
+
+To build and run jar call
+```sh
+$ mvn clean compile assembly:single
+$ java -jar target/rock-paper-scissors-jar-with-dependencies.jar
+```
