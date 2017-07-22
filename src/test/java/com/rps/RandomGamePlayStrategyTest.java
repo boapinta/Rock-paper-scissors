@@ -17,12 +17,12 @@ public class RandomGamePlayStrategyTest {
 
     @Test
     public void shouldReturnVariousResults() {
-        Map<PlayOption, Long> playOptions = IntStream
+        Map<GamePlayOption, Long> playOptions = IntStream
                 .rangeClosed(1, 100)
                 .mapToObj(i -> strategy.play())
                 .collect(groupingBy(identity(), counting()));
 
         assertThat(playOptions.keySet())
-                .contains(PlayOption.ROCK, PlayOption.PAPER, PlayOption.SCISORS);
+                .contains(GamePlayOption.ROCK, GamePlayOption.PAPER, GamePlayOption.SCISSORS);
     }
 }

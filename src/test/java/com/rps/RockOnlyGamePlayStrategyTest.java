@@ -16,12 +16,12 @@ public class RockOnlyGamePlayStrategyTest {
 
     @Test
     public void shouldReturnRockOnly() {
-        Map<PlayOption, Long> playOptions = IntStream
+        Map<GamePlayOption, Long> playOptions = IntStream
                 .rangeClosed(1, 100)
                 .mapToObj(i -> strategy.play())
                 .collect(groupingBy(identity(), counting()));
 
-        assertThat(playOptions.keySet()).contains(PlayOption.ROCK);
-        assertThat(playOptions.keySet()).doesNotContain(PlayOption.PAPER, PlayOption.SCISORS);
+        assertThat(playOptions.keySet()).contains(GamePlayOption.ROCK);
+        assertThat(playOptions.keySet()).doesNotContain(GamePlayOption.PAPER, GamePlayOption.SCISSORS);
     }
 }

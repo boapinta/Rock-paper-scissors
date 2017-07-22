@@ -1,5 +1,5 @@
 package com.rps;
 
 public interface GamePlayStrategy {
-    PlayOption play();
+    GamePlayOption play();
 }
