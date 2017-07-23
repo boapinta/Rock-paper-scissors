@@ -35,3 +35,12 @@ To build and run jar call
 $ mvn clean compile assembly:single
 $ java -jar target/rock-paper-scissors-jar-with-dependencies.jar
 ```
+
+**Example output**</br>
+```sh
+2017-07-23 08:34:28 [main] INFO  com.rps.GamePlaySessionRunner - Running session with 100 turns
+2017-07-23 08:34:28 [main] INFO  com.rps.GamePlaySessionRunner - Players played 100 times
+2017-07-23 08:34:28 [main] INFO  com.rps.GamePlaySessionRunner - Player1 won 30 times
+2017-07-23 08:34:28 [main] INFO  com.rps.GamePlaySessionRunner - Player2 won 31 times
+2017-07-23 08:34:28 [main] INFO  com.rps.GamePlaySessionRunner - There were 39 draws
+```
